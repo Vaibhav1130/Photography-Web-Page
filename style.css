@@ -1,0 +1,197 @@
+/* for entire website window */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+/* background image */
+.main_box {
+    background: url(photo.jpg);
+    /* for use full size of window */
+    height: 100vh;
+    background-size: cover;
+}
+
+/* button sidebar */
+.btn_one 
+i{
+    /* color */
+    color: white;
+    /* size */
+    font-size: 30px;
+    /* dark */
+    font-weight: 700;
+    /* position absolute because parent document relation change */
+    position: absolute;
+    /* from left move */
+    left: 15px;
+    /* line height make upper from down side line distance */
+    line-height: 50px;
+    /* cursor */
+    cursor: pointer;
+    /* smooth transition */
+    transition: all 0.1s linear;
+}
+
+/* sidebar */
+.sidebar_menu {
+    /* set fix position */
+    position: fixed;
+    /* for hide sidebar from window */
+    left: -300px;
+    /* for use full size of sidebar menu */
+    height: 100vh;
+    /* width */
+    width: 300px;
+    /* background color */
+    background-color: rgba( 255, 255, 255, 0.1);
+    /* shadow of background color */
+    box-shadow: 0 0 5px rgba( 255, 255, 255, 0.5);
+    /* smooth transition */
+    transition: all 0.2s linear;
+}
+
+/* sidebar menu (logo) */
+.sidebar_menu 
+.logo {
+    /* position absolute because parent document relation change */
+    position: absolute;
+    /* use the complete width of sidebar */
+    width: 100%;
+    /* line height make upper from down side line distance */
+    line-height: 50px;
+    /* shadow of background color */
+    box-shadow: 0 2px 3px rgba( 255, 255, 255, 0.5);
+    height: 50px;
+}
+
+/* sidebar menu (anchor tag) a */
+.sidebar_menu 
+.logo 
+a {
+    position: absolute;
+    /* move the element from left */
+    left: 40px;
+    /* color the text */
+    color: white;
+    /* remove the underline */
+    text-decoration: none;
+    /* font size */
+    font-size: 22px;
+    /* font bold */
+    font-weight: 400;
+}
+
+/* sidebar menu (button two) */
+.sidebar_menu 
+.btn_two 
+i {
+    position: absolute;
+    color: gray;
+    font-size: 25px;
+    line-height: 50px;
+    left: 270px;
+    opacity: 0;
+    cursor: pointer;
+    /* smooth transition */
+    transition: all 0.1s linear;
+}
+
+/* sidebar menu (menu)  */
+.sidebar_menu 
+.menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+
+}
+
+/* sidebar menu (menu(list)) */
+.sidebar_menu 
+.menu 
+li {
+    margin: 5px;
+    padding: 15px 20px;
+}
+
+/* sidebar menu (menu(icon & anchor)both) */
+.sidebar_menu 
+.menu 
+i,a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* spacing between icon and text */
+.sidebar_menu 
+.menu 
+i {
+    padding-right: 5px;
+}
+
+/* sidebar menu social media icons */
+.sidebar_menu 
+.social_media {
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+
+.sidebar_menu 
+.social_media 
+i {
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check {
+    display: none;
+}
+
+/* hover effect */
+
+/* sidebar menu (menu(list)) */
+.sidebar_menu
+.menu
+li:hover {
+    box-shadow: 0 0 5px rgba( 255, 255, 255, 0.5);
+}
+
+/* button one hamburger */
+.btn_one 
+i:hover {
+    font-size: 35px;
+}
+
+/* button two cross */
+.btn_two 
+i:hover {
+    font-size: 30px;
+}
+
+/* sidebar menu (social media(icon)) */
+.sidebar_menu
+.social_media
+i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* checkbox configuration */
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+/* if button one is click then it is invisible */
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
+
+/* showing button using opacity */
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1;
+}
+
